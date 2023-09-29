@@ -1,0 +1,53 @@
+<%- include('partials/header.ejs') %>
+
+<body>
+
+    <link rel="stylesheet" href="/public/main.css">
+    <style>
+        /* Füge einen Abstand zwischen dem Inhalt und dem Footer hinzu */
+        .container2 {
+            margin-bottom: 300px; /* Du kannst den Wert nach Bedarf anpassen */
+        }
+
+    </style>
+    
+
+    <div class="container">
+        <div class="page-center">
+            <h3><%= listenTitel %></h3>
+            <form action="/" method="post">
+                <input type="text" name="notizText" placeholder="Neue Notiz" required>
+                <button type="submit" name="notiztext" value="<%=listenTitel%>">+</button>
+                </form>
+                
+            </form>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="container2">
+            <div class="row align-center">
+                <% Notizen.forEach(function(notiz) { %>
+                    <div class="col-md-6 wider-card"> 
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <p class="card-text"> <%= notiz.notiztext %></p>
+                                <form action="/delete" method="post">
+                                    <input type="hidden" name="button" value="<%= notiz._id %>" style="display: none;" onclick="this.form.submit()">
+                                    <input type="hidden" name="listenName" value="<%= listenTitel %>"></input>
+                                    <button type="submit" class="btn btn-danger" style="color: white;">Löschen</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
+
+<%- include('partials/footer.ejs') %>
+   

@@ -1,0 +1,39 @@
+.page-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin-bottom: 50px;
+        }
+
+.wider-card {
+            width: 30%;
+            margin: 10px auto;
+            
+        }
+
+      
+.align-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+
+html {
+            background-color: #E4E9FD;
+            background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+            min-height: 1000px;
+            font-family: 'helvetica neue';
+          }
+
+
+
+        
+
+
+        
+
