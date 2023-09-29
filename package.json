@@ -18,6 +18,11 @@
   "author": "",
   
   "license": "ISC",
+
+  "engines": {
+
+    "node": "20.5.0"
+  },
   
   "description": "",
   

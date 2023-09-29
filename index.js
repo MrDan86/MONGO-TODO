@@ -8,7 +8,7 @@ mongoose.connect('mongodb+srv://admin-dan:Prometheus86@cluster0.oyoeflq.mongodb.
 
 
 const app = express();
-const port = 3000;
+// const port = 3000;
 let lastDate;
 
 app.use(express.static("public"));
@@ -147,6 +147,12 @@ app.get("/:dynamischeListen", function (req, res) {
 
 });
 
+
+let port = process.env.PORT;
+if(port == null || port == "") {
+
+    port = 3000;
+}
 app.listen(port, function() {
-    console.log("Server is running on port " + port);
+    console.log("Server has started on port " + port);
 });
