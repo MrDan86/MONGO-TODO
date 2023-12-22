@@ -163,7 +163,7 @@
 
 
 
-INDEX:ejs
 
 
-<button class="btn btn-danger" onclick="deleteMessage(<%=i%>)">Löschen</button>
+
+
