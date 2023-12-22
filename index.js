@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import lodash from "lodash";
 
 //Mongoose-Verbindung
-mongoose.connect('mongodb+srv://admin-dan:Prometheus86@cluster0.oyoeflq.mongodb.net/todolistDB');
+mongoose.connect('mongodb+srv://admin-dan:XXX@cluster0.oyoeflq.mongodb.net/todolistDB');
 
 
 const app = express();
